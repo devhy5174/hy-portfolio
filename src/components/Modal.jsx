@@ -25,7 +25,11 @@ function Modal({ item, onClose }) {
         </button>
 
         <div className="prev">
-          <Preview kind="mini" />
+          {item.image ? (
+            <img src={item.image} alt={item.title} className="modal-image" />
+          ) : (
+            <Preview kind="mini" />
+          )}
         </div>
 
         <div className="body">

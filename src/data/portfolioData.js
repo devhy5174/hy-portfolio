@@ -1,4 +1,6 @@
 import aiEthicsImg from "../assets/lessons/aiEthicsImg.png";
+import metaverseImg from "../assets/works/metaverseImg.jpeg";
+
 export const PROFILE = {
   name: "이희연",
   bio: "배우고, 만들고, 나누는 디지털 경험을 기록합니다.",
@@ -40,11 +42,11 @@ export const LESSONS = [
 
 export const APPS = [
   {
-    cat: "app",
-    title: "할 일 관리 앱",
-    sub: "Todo CRUD",
-    desc: "추가 · 수정 · 삭제까지 되는 기본 CRUD 미니앱",
-    url: "#",
+    title: "3D 메타버스 미니게임",
+    sub: "3D Web Game · AI-assisted",
+    desc: "AI 코딩 도구를 활용해 제작한 간단한 3D 공간형 웹 게임입니다. 캐릭터를 조작하며 가상 공간을 탐색할 수 있도록 구현했습니다.",
+    image: metaverseImg,
+    url: "https://sage-pavlova-e77656.netlify.app/",
   },
   {
     cat: "app",
