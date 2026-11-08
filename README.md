@@ -1,16 +1,33 @@
-# React + Vite
+HY’s Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI·디지털 교육 활동과 직접 제작한 웹·앱 프로젝트를 소개하는 개인 포트폴리오입니다.
 
-Currently, two official plugins are available:
+About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+초·중등 및 시니어를 대상으로 한 AI·디지털 교육을 준비하며
+직접 제작한 교육 자료와 웹·앱 프로젝트, 교육 활동 이력을 정리했습니다.
 
-## React Compiler
+Contents
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- About — 프로필 및 주요 교육·학습 이력
+- Lesson Plans — 직접 제작한 AI·디지털 교육 자료
+- Works — 바이브코딩 및 웹·앱 제작 프로젝트
+- History — 교육 및 활동 이력
 
-## Expanding the ESLint configuration
+Tech
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript
+- CSS
+
+Development
+
+AI 코딩 도구를 활용해 초기 UI를 설계하고,
+React + Vite 환경으로 구성하여 컴포넌트와 데이터를 분리하고 직접 수정·구현했습니다.
+
+Author
+
+이희연
+
+AI·디지털 교육 · 에듀테크 · 디지털 리터러시
