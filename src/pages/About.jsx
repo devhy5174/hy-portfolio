@@ -5,7 +5,7 @@ import Modal from "../components/Modal";
 import Icon from "../components/Icon";
 import Preview from "../components/Preview";
 
-import profileImg from "../assets/profile/profileImg_1.png";
+import profileCharacterImg from "../assets/profile/character.jpeg";
 
 function About() {
   const [open, setOpen] = useState(null);
@@ -29,7 +29,7 @@ function About() {
       {/* 프로필 */}
       <div className="profile">
         <div className="photo">
-          <img src={profileImg} alt={`${PROFILE.name} 프로필`} />
+          <img src={profileCharacterImg} alt={`${PROFILE.name} 프로필`} />
         </div>
 
         <div>

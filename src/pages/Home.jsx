@@ -1,7 +1,7 @@
 import { SECTIONS } from "../data/portfolioData";
 import Preview from "../components/Preview";
 import Icon from "../components/Icon";
-import profileImg from "../assets/profile/profileImg_1.png";
+import profileImg from "../assets/profile/profileImg_3.png";
 
 function Home() {
   return (

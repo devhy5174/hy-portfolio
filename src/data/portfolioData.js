@@ -1,6 +1,6 @@
 export const PROFILE = {
   name: "이희연",
-  bio: "배우고 만들고 나누는 걸 좋아하는 사람입니다. 교육 자료를 만들고, 바이브코딩으로 작은 앱을 직접 만들어 배포합니다.",
+  bio: "배우고, 만들고, 나누는 디지털 경험을 기록합니다.",
   chips: ["교육 설계", "바이브코딩", "React", "CRUD 앱"],
 };
 
@@ -164,16 +164,8 @@ export const SECTIONS = [
     b: "교육안 보기",
   },
   {
-    to: "works",
-    t: "미니앱",
-    en: "Mini apps (CRUD)",
-    d: "직접 만든 CRUD 앱들",
-    k: "dots",
-    b: "앱 구경하기",
-  },
-  {
     to: "works?vibe",
-    t: "바이브코딩 전시관",
+    t: "앱 전시관",
     en: "Vibe coding gallery",
     d: "만들고 배포한 앱 전시",
     k: "dots",
