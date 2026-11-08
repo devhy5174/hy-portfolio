@@ -3,7 +3,7 @@ import Preview from "../components/Preview";
 import Icon from "../components/Icon";
 import profileImg from "../assets/profile/profileImg_3.png";
 
-function Home() {
+function Home({ go }) {
   return (
     <div>
       <section className="hero home-hero">
@@ -23,7 +23,7 @@ function Home() {
 
       <div className="grid">
         {SECTIONS.map((s, i) => (
-          <button key={s.to} className="card" onClick={() => go(s.to)}>
+          <button key={s.t} className="card" onClick={() => go(s.to)}>
             <div className="prev">
               <Preview kind={s.k} />
             </div>

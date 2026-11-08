@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { WORKS, CATS, CATNAME } from "../data/portfolioData";
+import { APPS, CATS, CATNAME, LESSONS } from "../data/portfolioData";
 
 import Preview from "../components/Preview";
 import Icon from "../components/Icon";
@@ -10,7 +10,18 @@ function Works({ initial = "all" }) {
   const [cat, setCat] = useState(initial);
   const [open, setOpen] = useState(null);
 
-  const list = WORKS.filter((work) => cat === "all" || work.cat === cat);
+  const allItems = [
+    ...LESSONS.map((item) => ({
+      ...item,
+      cat: "lesson",
+    })),
+
+    ...APPS.map((item) => ({
+      ...item,
+      cat: "app",
+    })),
+  ];
+  const list = allItems.filter((item) => cat === "all" || item.cat === cat);
 
   return (
     <div>
@@ -19,7 +30,7 @@ function Works({ initial = "all" }) {
           직접 <b>만든 것들</b>
         </h1>
 
-        <p>CRUD 미니앱부터 바이브코딩, 배포한 앱까지 전시해요.</p>
+        <p>배우고 직접 만들어 본 교육자료와 웹·앱을 한곳에 모았습니다.</p>
       </section>
 
       {/* 카테고리 필터 */}
@@ -49,7 +60,11 @@ function Works({ initial = "all" }) {
             <div className="prev">
               <span className="tag">{CATNAME[work.cat]}</span>
 
-              <Preview kind="dots" />
+              {work.image ? (
+                <img src={work.image} alt={work.title} className="work-image" />
+              ) : (
+                <Preview kind="dots" />
+              )}
             </div>
 
             <div className="meta">

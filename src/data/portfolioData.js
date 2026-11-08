@@ -1,29 +1,36 @@
+import aiEthicsImg from "../assets/lessons/aiEthicsImg.png";
 export const PROFILE = {
   name: "이희연",
   bio: "배우고, 만들고, 나누는 디지털 경험을 기록합니다.",
   chips: ["교육 설계", "바이브코딩", "React", "CRUD 앱"],
 };
 
-export const EDU = [
+export const LESSONS = [
   {
-    title: "AI 활용 기초 교육안",
-    sub: "AI basics",
-    desc: "처음 시작하는 분들을 위한 AI 도구 사용법 교육안입니다.",
-    url: "#",
+    cat: "lesson",
+    title: "AI의 판단, 믿어도 될까요?",
+    sub: "AI 윤리 · 이미지 학습 실습",
+    desc: "식용버섯과 독버섯 이미지 학습 실습을 통해 데이터에 따라 AI의 판단이 달라질 수 있음을 체험하고, AI의 결과를 검증하고 다시 확인하는 태도를 배우는 교육안입니다.",
+    source: "디지털윤리 초등 실습자료 참고 및 제공 데이터 활용",
+    image: aiEthicsImg,
+    url: "https://canva.link/r7710ynmnof4ur5",
   },
   {
+    cat: "lesson",
     title: "바이브코딩 입문",
     sub: "Vibe coding 101",
     desc: "말로 설명해서 앱을 만드는 과정을 단계별로 정리했습니다.",
     url: "#",
   },
   {
+    cat: "lesson",
     title: "엑셀 업무 자동화",
     sub: "Excel automation",
     desc: "반복 업무를 줄이는 함수와 자동화 실습 자료입니다.",
     url: "#",
   },
   {
+    cat: "lesson",
     title: "디지털 문해력 수업",
     sub: "Digital literacy",
     desc: "일상에서 바로 쓰는 디지털 활용 교육안입니다.",
@@ -31,44 +38,44 @@ export const EDU = [
   },
 ];
 
-export const WORKS = [
+export const APPS = [
   {
-    cat: "mini",
+    cat: "app",
     title: "할 일 관리 앱",
     sub: "Todo CRUD",
     desc: "추가 · 수정 · 삭제까지 되는 기본 CRUD 미니앱",
     url: "#",
   },
   {
-    cat: "mini",
+    cat: "app",
     title: "독서 기록장",
     sub: "Book log",
     desc: "읽은 책을 기록하고 별점을 남기는 앱",
     url: "#",
   },
   {
-    cat: "vibe",
+    cat: "app",
     title: "나의 하루",
     sub: "My day",
     desc: "바이브코딩으로 만든 하루 기록 앱",
     url: "#",
   },
   {
-    cat: "vibe",
+    cat: "lesson",
     title: "퀴즈 메이커",
     sub: "Quiz maker",
     desc: "수업용 퀴즈를 빠르게 만드는 도구",
     url: "#",
   },
   {
-    cat: "live",
+    cat: "app",
     title: "출석 체크",
     sub: "Attendance",
     desc: "실제 배포해서 쓰고 있는 출석 앱",
     url: "#",
   },
   {
-    cat: "live",
+    cat: "lesson",
     title: "교육안 모음 사이트",
     sub: "Lesson hub",
     desc: "배포 완료한 교육 자료 허브",
@@ -78,15 +85,13 @@ export const WORKS = [
 
 export const CATS = {
   all: "전체",
-  mini: "미니앱 (CRUD)",
-  vibe: "바이브코딩",
-  live: "배포한 앱",
+  lesson: "교육자료",
+  app: "앱 · 웹",
 };
 
 export const CATNAME = {
-  mini: "미니앱",
-  vibe: "바이브코딩",
-  live: "배포",
+  lesson: "교육자료",
+  app: "앱 · 웹",
 };
 
 export const HISTORY = [
@@ -151,31 +156,34 @@ export const SECTIONS = [
     to: "about",
     t: "나에 대한 소개",
     en: "About me",
-    d: "프로필과 걸어온 길",
+    d: "배우고, 만들고, 나누는 이야기",
     k: "profile",
     b: "소개 보기",
   },
+
   {
-    to: "about#edu",
-    t: "교육안",
+    to: "works",
+    t: "교육자료",
     en: "Lesson plans",
-    d: "직접 만든 교육 자료 모음",
-    k: "mini",
-    b: "교육안 보기",
+    d: "직접 구성하고 만든 수업 자료",
+    k: "lesson",
+    b: "교육자료 보기",
   },
+
   {
-    to: "works?vibe",
-    t: "앱 전시관",
-    en: "Vibe coding gallery",
-    d: "만들고 배포한 앱 전시",
-    k: "dots",
-    b: "전시관 가기",
+    to: "works",
+    t: "앱 · 웹",
+    en: "Apps & Web",
+    d: "아이디어를 직접 구현한 웹과 앱",
+    k: "app",
+    b: "작품 보기",
   },
+
   {
     to: "history",
     t: "활동이력",
     en: "Activity history",
-    d: "시간순으로 보는 기록",
+    d: "배우고 경험해 온 과정",
     k: "tl",
     b: "이력 보기",
   },
