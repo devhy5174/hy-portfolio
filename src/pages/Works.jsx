@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { APPS, CATS, CATNAME, LESSONS } from "../data/portfolioData";
+import { APPS, CATS, CATNAME, LESSONS, CREATION } from "../data/portfolioData";
 
 import Preview from "../components/Preview";
 import Icon from "../components/Icon";
@@ -20,8 +20,69 @@ function Works({ initial = "all" }) {
       ...item,
       cat: "app",
     })),
+    ...CREATION.map((item) => ({
+      ...item,
+      cat: "creation",
+    })),
   ];
   const list = allItems.filter((item) => cat === "all" || item.cat === cat);
+
+  const renderCard = (work, i) => (
+    <button
+      key={work.title}
+      className="card page"
+      style={{
+        animationDelay: i * 40 + "ms",
+      }}
+      onClick={() => setOpen(work)}
+    >
+      <div className="prev">
+        <span className="tag">{CATNAME[work.cat]}</span>
+
+        {work.video ? (
+          <video
+            src={work.video}
+            className="work-image"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : work.image ? (
+          <img src={work.image} alt={work.title} className="work-image" />
+        ) : (
+          <Preview kind="dots" />
+        )}
+      </div>
+
+      {/* ↓ 여기는 네 기존 카드 제목/설명 부분 그대로 */}
+      <h3>{work.title}</h3>
+      <div className="sub">{work.sub}</div>
+      <p>{work.desc}</p>
+
+      <div className="more">자세히 →</div>
+    </button>
+  );
+
+  const sections = [
+    {
+      key: "lesson",
+      title: "교육자료",
+      desc: "직접 기획하고 제작한 AI·디지털 교육자료",
+    },
+
+    {
+      key: "app",
+      title: "앱 · 웹",
+      desc: "직접 기획하고 구현한 웹·앱 프로젝트",
+    },
+
+    {
+      key: "creation",
+      title: "디지털 창작",
+      desc: "AI 도구를 활용해 제작한 영상·그림책·콘텐츠",
+    },
+  ];
 
   return (
     <div>
@@ -47,41 +108,35 @@ function Works({ initial = "all" }) {
       </div>
 
       {/* 작품 목록 */}
-      <div className="grid" key={cat}>
-        {list.map((work, i) => (
-          <button
-            key={work.title}
-            className="card page"
-            style={{
-              animationDelay: i * 40 + "ms",
-            }}
-            onClick={() => setOpen(work)}
-          >
-            <div className="prev">
-              <span className="tag">{CATNAME[work.cat]}</span>
+      {cat === "all" ? (
+        <div className="work-sections">
+          {sections.map((section) => {
+            const sectionWorks = list.filter(
+              (work) => work.cat === section.key,
+            );
 
-              {work.image ? (
-                <img src={work.image} alt={work.title} className="work-image" />
-              ) : (
-                <Preview kind="dots" />
-              )}
-            </div>
+            if (sectionWorks.length === 0) return null;
 
-            <div className="meta">
-              <h3>{work.title}</h3>
+            return (
+              <section className="work-section" key={section.key}>
+                <div className="section-title">
+                  <h2>{section.title}</h2>
 
-              <p className="en">{work.sub}</p>
+                  <p>{section.desc}</p>
+                </div>
 
-              <p className="desc">{work.desc}</p>
-            </div>
-
-            <span className="go">
-              자세히
-              <Icon n="arrow" s={15} />
-            </span>
-          </button>
-        ))}
-      </div>
+                <div className="grid">
+                  {sectionWorks.map((work, i) => renderCard(work, i))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="grid" key={cat}>
+          {list.map((work, i) => renderCard(work, i))}
+        </div>
+      )}
 
       {/* 상세 모달 */}
       {open && <Modal item={open} onClose={() => setOpen(null)} />}

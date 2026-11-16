@@ -1,5 +1,11 @@
 import aiEthicsImg from "../assets/lessons/aiEthicsImg.png";
+import aiDeepfakeImg from "../assets/lessons/aiDeepfakeImg.png";
 import metaverseImg from "../assets/works/metaverseImg.jpeg";
+import spreadsheetAutomationImg from "../assets/lessons/spreadsheetAutomationImg.png";
+import aiPictureBookImg from "../assets/creation/aiPictureBookImg.png";
+
+import aiDailyRoutineVideo from "../assets/creation/aiDailyRoutine.mp4";
+import aiPictureBookVideo from "../assets/creation/aiPictureBookVideo.mp4";
 
 export const PROFILE = {
   name: "이희연",
@@ -19,23 +25,27 @@ export const LESSONS = [
   },
   {
     cat: "lesson",
-    title: "바이브코딩 입문",
-    sub: "Vibe coding 101",
-    desc: "말로 설명해서 앱을 만드는 과정을 단계별로 정리했습니다.",
-    url: "#",
+    title: "AI로 만든 모습, 어디까지 괜찮을까?",
+    sub: "AI 윤리 · 딥페이크 · 초상권",
+    desc: "AI로 만든 유명인 합성 사례를 통해 딥페이크의 개념을 이해하고, 다른 사람의 사진과 얼굴을 활용할 때 지켜야 할 동의와 권리, 올바른 AI 활용 태도를 배우는 교육안입니다.",
+    source: "국가법령정보센터 관련 법령 및 AI 윤리 사례 참고",
+    image: aiDeepfakeImg,
+    url: "https://canva.link/1f3asu385kpm5b9",
   },
   {
     cat: "lesson",
-    title: "엑셀 업무 자동화",
-    sub: "Excel automation",
-    desc: "반복 업무를 줄이는 함수와 자동화 실습 자료입니다.",
-    url: "#",
+    title: "AI로 더 쉽게, 엑셀 업무 자동화",
+    sub: "AI 활용 · 구글시트 · 업무 자동화",
+    desc: "스프레드시트 데이터를 활용해 반복 업무를 효율적으로 처리하고, Gemini와 연계하여 데이터 입력·정리·분석 등 실무에 활용할 수 있는 AI 업무 자동화 방법을 익히는 교육안입니다.",
+    source: "Google Sheets 및 Gemini 활용 실습",
+    image: spreadsheetAutomationImg,
+    url: "https://canva.link/3ltu8qqd9o58d0g",
   },
   {
     cat: "lesson",
-    title: "디지털 문해력 수업",
-    sub: "Digital literacy",
-    desc: "일상에서 바로 쓰는 디지털 활용 교육안입니다.",
+    title: "준비중",
+    sub: "준비중",
+    desc: "준비중.",
     url: "#",
   },
 ];
@@ -84,16 +94,47 @@ export const APPS = [
     url: "#",
   },
 ];
+export const CREATION = [
+  {
+    cat: "creation",
+    title: "AI로 만든 나의 하루일과",
+    sub: "AI 영상 · 픽셀아트 · 디지털 창작",
+    desc: "일상의 장면을 픽셀 게임 콘셉트로 구성하고, Google Flow로 영상을 제작한 뒤 AI 생성 음악과 Canva 편집·자막을 더해 완성한 디지털 창작 프로젝트입니다.",
+    source: "Google Flow · Google Music AI · Canva 활용",
+    video: aiDailyRoutineVideo,
+    url: "https://canva.link/p5y40vpoelgs1rs",
+  },
+  {
+    cat: "creation",
+    title: "아직 지도가 완성되지 않았어",
+    sub: "AI 그림책 · 스토리텔링 · 디지털 창작",
+    desc: "생성형 AI를 활용해 스토리를 기획하고 Google Flow의 장면 만들기를 활용해 캐릭터와 그림 스타일의 일관성을 유지하며 여러 장면을 제작한 AI 그림책 프로젝트입니다. Canva에서 편집해 그림책으로 완성하고, 작품 소개 영상까지 제작했습니다.",
+    source: "ChatGPT· · Google Flow · Canva · Heyzine Flipbook 활용",
+    image: aiPictureBookImg,
+    url: "https://heyzine.com/admin/view?n=f8fc7246be03cb283c38a30492ac71a8d80015e5.pdf&adminKey=0c62cd1865a36b878565d60abe9d9fd6#page/1",
+  },
+  {
+    cat: "creation",
+    title: "「아직 지도가 완성되지 않았어」 북트레일러",
+    sub: "AI 영상 · 북트레일러 · 디지털 창작",
+    desc: "AI 그림책 「아직 지도가 완성되지 않았어」의 주요 장면과 세계관을 영상으로 재구성한 북트레일러입니다. AI 영상과 음악을 활용하고 Canva에서 편집해 완성했습니다.",
+    source: "ChatGPT · Google Flow · Google Flow Music · Canva 활용",
+    video: aiPictureBookVideo,
+    url: "https://canva.link/fxp1u73xt1bd1nx",
+  },
+];
 
 export const CATS = {
   all: "전체",
   lesson: "교육자료",
   app: "앱 · 웹",
+  creation: "디지털 창작",
 };
 
 export const CATNAME = {
   lesson: "교육자료",
   app: "앱 · 웹",
+  creation: "디지털 창작",
 };
 
 export const HISTORY = [

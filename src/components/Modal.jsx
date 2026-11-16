@@ -25,7 +25,16 @@ function Modal({ item, onClose }) {
         </button>
 
         <div className="prev">
-          {item.image ? (
+          {item.video ? (
+            <video
+              src={item.video}
+              className="work-image"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          ) : item.image ? (
             <img src={item.image} alt={item.title} className="modal-image" />
           ) : (
             <Preview kind="mini" />
