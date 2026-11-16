@@ -227,7 +227,7 @@ export const SECTIONS = [
     t: "활동이력",
     en: "Activity history",
     d: "배우고 경험해 온 과정",
-    k: "tl",
+    k: "history",
     b: "이력 보기",
   },
 ];

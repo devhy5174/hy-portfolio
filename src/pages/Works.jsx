@@ -55,12 +55,18 @@ function Works({ initial = "all" }) {
         )}
       </div>
 
-      {/* ↓ 여기는 네 기존 카드 제목/설명 부분 그대로 */}
-      <h3>{work.title}</h3>
-      <div className="sub">{work.sub}</div>
-      <p>{work.desc}</p>
+      <div className="meta">
+        <h3>{work.title}</h3>
 
-      <div className="more">자세히 →</div>
+        <p className="en">{work.sub}</p>
+
+        <p className="desc">{work.desc}</p>
+      </div>
+
+      <span className="go">
+        자세히
+        <Icon n="arrow" s={15} />
+      </span>
     </button>
   );
 

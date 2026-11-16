@@ -43,13 +43,10 @@ function Modal({ item, onClose }) {
 
         <div className="body">
           <h3>{item.title}</h3>
-
           <p className="en">{item.sub}</p>
-
           <p className="desc" style={{ fontSize: "15px" }}>
             {item.desc}
           </p>
-
           <a
             className="go"
             href={item.url}

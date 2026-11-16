@@ -5,7 +5,19 @@ function Header({ currentPage, go }) {
   return (
     <header>
       <div className="nav">
-        <div className="logo">
+        <div
+          className="logo"
+          onClick={() => go("home")}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+
+              go("home");
+            }
+          }}
+        >
           <i></i>
           HY's Portfolio
         </div>
