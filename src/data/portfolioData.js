@@ -3,6 +3,7 @@ import aiDeepfakeImg from "../assets/lessons/aiDeepfakeImg.png";
 import metaverseImg from "../assets/works/metaverseImg.jpeg";
 import spreadsheetAutomationImg from "../assets/lessons/spreadsheetAutomationImg.png";
 import aiPictureBookImg from "../assets/creation/aiPictureBookImg.png";
+import slow_trainImg from "../assets/works/slow_trainImg.png";
 
 import aiDailyRoutineVideo from "../assets/creation/aiDailyRoutine.mp4";
 import aiPictureBookVideo from "../assets/creation/aiPictureBookVideo.mp4";
@@ -60,18 +61,13 @@ export const APPS = [
   },
   {
     cat: "app",
-    title: "독서 기록장",
-    sub: "Book log",
-    desc: "읽은 책을 기록하고 별점을 남기는 앱",
-    url: "#",
+    title: "slow_train | 느린 기차",
+    sub: "3D Web Game · Multiplayer · AI-assisted",
+    desc: "Three.js와 Supabase를 활용해 제작한 실시간 멀티플레이 3D 웹 게임입니다. 레트로 기차를 배경으로 캐릭터 이동, 좌석 착석, 말풍선 대화, NPC 활동 및 승차권 검표 시스템을 구현했습니다.",
+    image: slow_trainImg,
+    url: "https://glittery-druid-48ad20.netlify.app/",
   },
-  {
-    cat: "app",
-    title: "나의 하루",
-    sub: "My day",
-    desc: "바이브코딩으로 만든 하루 기록 앱",
-    url: "#",
-  },
+
   {
     cat: "lesson",
     title: "퀴즈 메이커",
