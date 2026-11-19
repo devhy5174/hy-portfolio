@@ -65,7 +65,7 @@ export const APPS = [
     sub: "3D Web Game · Multiplayer · AI-assisted",
     desc: "Three.js와 Supabase를 활용해 제작한 실시간 멀티플레이 3D 웹 게임입니다. 레트로 기차를 배경으로 캐릭터 이동, 좌석 착석, 말풍선 대화, NPC 활동 및 승차권 검표 시스템을 구현했습니다.",
     image: slow_trainImg,
-    url: "https://glittery-druid-48ad20.netlify.app/",
+    url: "https://devhy5174.github.io/slow_train/",
   },
 
   {
